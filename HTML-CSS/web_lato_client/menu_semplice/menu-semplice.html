@@ -1,0 +1,104 @@
+<!--
+  Implementazione sperimentale in CSS/HTML di un menu che tramite il click del mouse apre delle pagine interne.
+  Unica pecca: il contenuto mostrato sparisce appena si clicca altrove.
+-->
+
+<html>
+ <head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+    <title>Menu semplice</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+      body {
+        background: #eee
+      }
+      a,p,h1,h2 {
+        font-family: 'Open Sans',sans-serif;
+      }
+      #topbar a {
+        text-decoration: none;
+        margin-right: 1.5%;
+          font-size: 18px;
+          color: #333;
+          text-transform: uppercase;
+        outline: none;
+        }
+      #topbar {
+          background-color: #fff;
+          position: sticky;
+          padding: 1%;
+          margin-top: -7px;
+          box-shadow: 1px 2px 7px 2px #ccc;
+          border-radius: 2px;
+}
+        
+      a:hover{
+        border-bottom: solid 1px;
+      }
+      #home,#chi-siamo,#dove-siamo,#contatti,#link,#lavora-con-noi {
+        display: none;
+        position: absolute;
+      }
+
+      #topbar a:nth-of-type(1):focus + #home, #topbar a:nth-of-type(2):focus + #chi-siamo, #topbar a:nth-of-type(3):focus + #dove-siamo, #topbar a:nth-of-type(4):focus + #contatti, #topbar a:nth-of-type(5):focus + #link, #topbar a:nth-of-type(6):focus + #lavora-con-noi {
+        display: block;
+      }
+
+    </style>
+  </head>
+  <header>
+        <div id="topbar">
+         <a href="#"  title="Home">Home</a>
+         <div id="home"><h1>Questa è la home</h1></div>
+
+         <a href="#"  title="Chi siamo">Chi siamo</a>
+         <div id="chi-siamo"><div>
+          <h1>Chi siamo?</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div></div> 
+
+         <a href="#"  title="Dove siamo">Dove siamo</a>
+         <div id="dove-siamo">
+          <h1>Ci troviamo qui</h1>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.4702825912605!2d12.571709915686428!3d41.925744870409794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6373ba09b579%3A0x432933e41cf9ad79!2sVia%20Tiburtina%2C%20Roma%20RM!5e0!3m2!1sit!2sit!4v1585521804461!5m2!1sit!2sit" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <p>
+            Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Metus dictum at tempor commodo. Amet consectetur adipiscing elit ut aliquam. Feugiat scelerisque varius morbi enim. Mattis enim ut tellus elementum sagittis vitae et. Tincidunt augue interdum velit euismod in. Tortor id aliquet lectus proin nibh nisl. Eu nisl nunc mi ipsum faucibus vitae aliquet. Congue mauris rhoncus aenean vel elit.
+          </p>
+        </div> 
+
+         <a href="#"  title="Contatti">Contatti</a>
+         <div id="contatti">
+          <h1>Come contattarci...</h1>
+          <b>Telefono: </b>348-xxx-xxx-xxx-9
+          <br>
+          <b>Email: </b> lanostra@emeil.it
+        </div>
+
+         <a href="#"  title="Link">Link</a>
+         <div id="link">
+          <h1>link</h1>
+        </div> 
+
+         <a href="#"  title="Lavora con noi">Lavora con noi</a>
+         <div id="lavora-con-noi">
+          <h1>Opportunità lavorative</h1>
+          <h2>
+            Perché lavorare con noi...
+          </h2>
+          <p>
+            Ultricies leo integer malesuada nunc vel risus. Lobortis elementum nibh tellus molestie. Cras fermentum odio eu feugiat pretium. Nunc sed velit dignissim sodales ut eu sem. Habitasse platea dictumst quisque sagittis purus. Purus semper eget duis at. Cursus eget nunc scelerisque viverra mauris in aliquam. Sed blandit libero volutpat sed cras ornare arcu. Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan.
+          </p>
+
+          <a>Invia il tuo Curriculum Vitae ></a>
+          <br>
+          <a>Scopri le posizioni aperte ></a>
+
+        </div>
+    </div>
+  </header>   
+  <body>
+  </body>
+
+</html>
