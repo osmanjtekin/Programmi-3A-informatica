@@ -1,0 +1,25 @@
+<html>
+ 
+ <head>
+ </head>
+
+ <body>
+  <div id="orologio"></div>
+  <script>
+    let orologio = document.getElementById("orologio");
+
+    let ora = ()=> { 
+      let d = Date.now(); // ms da gennaio delle ore 00:00:00 del 1970
+      let s = ~~(d/1000)%60; // convertiamo i millisecondi in secondi e dividiamo il risultato per avere i secondi attuali
+      let m = ~~(d/60000)%60; // convertiamo i millisecondi in minuti e dividiamo il risultato per avere i minuti attuali
+      let h = (~~(d/3600000)%24)+2; // convertiamo i millisecondi in ore e dividiamo il risultato per avere l'ora attuale. Aggiunta di 2 per il timezone italiano
+      orologio.innerHTML = `${h}:${m}:${s}`;
+    };
+
+    ora();
+    setInterval( ()=> { ora() }, 1000);
+
+  </script>
+ </body>
+
+</html>

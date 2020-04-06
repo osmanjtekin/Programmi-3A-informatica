@@ -1,0 +1,46 @@
+<html lang="en">
+
+ <head>
+      <title>Cambio di immagine </title>
+      <meta charset="utf-8">
+
+      <script language="javascript">
+
+		OnImage= new Image();
+		OnImage="intime2.jpg";
+		
+		OffImage=new Image();
+		OffImage="intime1.jpg";
+
+		function displayOnImage(){
+					  document.image.src=OnImage;
+					}
+
+                function displayOffImage(){
+                                          document.image.src=OffImage;
+                      		          }
+		
+      </script>
+
+ </head>
+
+ <body onload="window.alert('Rollover')">
+       
+       <br><br><br>
+       <hr width="60%"  noshade>
+       <h1 align="center"> CAMBIA IMMAGINE</h1>
+       
+       <div align="center">
+
+       <a href="#" onmouseover="displayOnImage()" onmouseout="displayOffImage()">
+       <img src="intime1.jpg" name="image" border="10" title="Cambio Immagine...">
+       </a>
+      
+       </div>
+
+       <br><br>
+       <hr width="60%"  noshade>
+       <p align="center">Muovi il mouse sopra.... </p>
+
+ </body>
+</html>

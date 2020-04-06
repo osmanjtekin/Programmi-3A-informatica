@@ -1,0 +1,45 @@
+<html>
+ 
+ <head> 
+   <title>Orologio_javascript</title>
+   <meta charset="utf-8">
+
+   <style>
+     table {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      border: solid 1px #333;
+     }
+   </style>
+ </head>
+
+ <body>
+
+
+<table>
+  <th>Ora</th>
+  <td>
+ <div id="prova">
+  <script>
+
+    let prova = document.getElementById("prova");
+
+    let orario_accelerato = (accel)=> {
+      let tempoStart = (new Date).valueOf();
+      setInterval( ()=> {
+        prova.innerHTML = (new Date(tempoStart + (Date.now() - tempoStart) * accel)).toLocaleTimeString();
+      }, accel);
+    };
+
+    orario_accelerato(50);
+    orario_accelerato(50);
+ 
+     </script>
+  </div>
+</td>
+</table>
+
+  </body>
+
+</html>
